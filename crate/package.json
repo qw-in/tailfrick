@@ -5,12 +5,12 @@
   "description": "",
   "exports": {
     "node": {
-      "default": "./pkg/tailfrick-node.js",
-      "types": "./pkg/tailfrick-node.d.ts"
+      "types": "./pkg/tailfrick-node.d.ts",
+      "default": "./pkg/tailfrick-node.js"
     },
     "default": {
-      "default": "./pkg/tailfrick-web.js",
-      "types": "./pkg/tailfrick-web.d.ts"
+      "types": "./pkg/tailfrick-web.d.ts",
+      "default": "./pkg/tailfrick-web.js"
     }
   },
   "files": [
