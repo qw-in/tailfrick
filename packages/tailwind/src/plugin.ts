@@ -2,7 +2,10 @@ import { withOptions } from "tailwindcss/plugin";
 import { run, default as webInit } from "@tailfrick/core";
 import type { CSSRuleObject } from "tailwindcss/types/config";
 
-if (typeof window !== 'undefined') {
+// @note defined by esbuilt
+declare const IS_NODE: boolean;
+
+if (!IS_NODE) {
   // @todo not so brittle
   console.debug('[tailfrick] running init')
   console.debug(`[tailfrick] ${import.meta.url}`);

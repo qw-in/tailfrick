@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>hello-wasm example</title>
+  </head>
+  <body>
+    <style></style>
+    <script type="module">
+      import init, { run } from "./pkg/tailfrick-web.js";
+      await init();
+      // @note init from cdn
+      // await init({ module_or_path: "https://unpkg.com/@tailfrick/core/pkg/tailfrick-web_bg.wasm" });
+      const result = run(
+        "--[----->+<]>----.-.++.++++++++.----.+++++++++++.---.++++++.-------.----------.[----->+++<]>--.[-->+<]>+++.++[->+++<]>+.+++++++++++.-------------..+++++++++.[-->+<]>++++.>++++++++++.>------[-->+++<]>.+[->+++<]>+.-----.--[--->+<]>--.------------.[->+++<]>++.[-->+<]>+++.[-->+++<]>+.-..+[--->++<]>.+.-[-->+<]>.>++++++++++.--[----->+<]>.---.++++.--.+.++++++++++++.[-->+<]>.[-->+<]>+++.[-->+++<]>+.-..+[--->++<]>.++[->+++<]>.+[->+++<]>."
+      );
+      console.log(result);
+    </script>
+  </body>
+</html>
