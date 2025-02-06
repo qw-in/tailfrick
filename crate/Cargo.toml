@@ -1,0 +1,14 @@
+[package]
+authors = ["Quinn Blenkinsop <quinn@blenkinsop.net>"]
+description = "babby's first wasm package"
+edition = "2021"
+license = "MIT"
+name = "tailfrick"
+repository = "https://github.com/qw-in/tailfrick"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.100"

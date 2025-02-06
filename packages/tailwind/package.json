@@ -1,0 +1,38 @@
+{
+  "collaborators": [
+    "Quinn Blenkinsop <quinn@blenkinsop.net>"
+  ],
+  "dependencies": {
+    "@tailfrick/core": "workspace:^"
+  },
+  "description": "",
+  "devDependencies": {
+    "esbuild": "^0.24.2",
+    "tailwindcss": "^3.0.24"
+  },
+  "exports": {
+    "node": {
+      "default": "./dist/plugin-node.js"
+    },
+    "default": {
+      "default": "./dist/plugin-web.js"
+    }
+  },
+  "files": [
+    "dist/plugin-node.js",
+    "dist/plugin-web.js"
+  ],
+  "license": "MIT",
+  "name": "@tailfrick/tailwind",
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "esbuild src/plugin.ts --outfile=dist/plugin-web.js --platform=browser --bundle --packages=external && esbuild src/plugin.ts --outfile=dist/plugin-node.js --platform=node --bundle --packages=external"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}

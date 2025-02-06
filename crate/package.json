@@ -1,0 +1,38 @@
+{
+  "collaborators": [
+    "Quinn Blenkinsop <quinn@blenkinsop.net>"
+  ],
+  "description": "",
+  "exports": {
+    "node": {
+      "default": "./pkg/tailfrick-node.js",
+      "types": "./pkg/tailfrick-node.d.ts"
+    },
+    "default": {
+      "default": "./pkg/tailfrick-web.js",
+      "types": "./pkg/tailfrick-web.d.ts"
+    }
+  },
+  "files": [
+    "pkg/tailfrick-node_bg.wasm",
+    "pkg/tailfrick-node.js",
+    "pkg/tailfrick-node.d.ts",
+    "pkg/tailfrick-web_bg.wasm",
+    "pkg/tailfrick-web.js",
+    "pkg/tailfrick-web.d.ts"
+  ],
+  "license": "MIT",
+  "name": "@tailfrick/core",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qw-in/tailfrick"
+  },
+  "scripts": {
+    "build": "wasm-pack build --target nodejs --release --out-name tailfrick-node && wasm-pack build --target web --release --out-name tailfrick-web"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}
