@@ -3,7 +3,8 @@ import { run, default as webInit } from "@tailfrick/core";
 import type { CSSRuleObject } from "tailwindcss/types/config";
 
 if (typeof window !== 'undefined') {
-  await webInit();
+  // @todo not so brittle
+  await webInit("https://unpkg.com/browse/@tailfrick/core/pkg/tailfrick-web_bg.wasm");
 }
 
 export type TailfrickPluginOptions = {};
