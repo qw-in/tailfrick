@@ -34,5 +34,5 @@
     "build": "esbuild src/plugin.ts --outfile=dist/plugin-web.js --format=esm --bundle && esbuild src/plugin.ts --outfile=dist/plugin-node.js --platform=node --format=esm --bundle --packages=external"
   },
   "type": "module",
-  "version": "0.1.5"
+  "version": "0.1.6"
 }
