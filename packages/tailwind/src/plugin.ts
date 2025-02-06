@@ -1,6 +1,10 @@
 import { withOptions } from "tailwindcss/plugin";
-import { run } from "@tailfrick/core";
+import { run, default as webInit } from "@tailfrick/core";
 import type { CSSRuleObject } from "tailwindcss/types/config";
+
+if (typeof window !== 'undefined') {
+  await webInit();
+}
 
 export type TailfrickPluginOptions = {};
 

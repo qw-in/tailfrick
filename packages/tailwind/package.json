@@ -31,8 +31,8 @@
     "access": "public"
   },
   "scripts": {
-    "build": "esbuild src/plugin.ts --outfile=dist/plugin-web.js --platform=browser --bundle --packages=external && esbuild src/plugin.ts --outfile=dist/plugin-node.js --platform=node --bundle --packages=external"
+    "build": "esbuild src/plugin.ts --outfile=dist/plugin-web.js --format=esm --bundle --packages=external && esbuild src/plugin.ts --outfile=dist/plugin-node.js --platform=node --format=esm --bundle --packages=external"
   },
   "type": "module",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
